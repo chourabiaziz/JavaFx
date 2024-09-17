@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="1060.0" prefWidth="1598.0" style="-fx-background-image: url('backhground.png'); -fx-background-size: cover; -fx-background-position: center;" styleClass="fill" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.controllers.PostShowClient">
+    <children>
+
+        <Button fx:id="post" layoutX="27.0" layoutY="35.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="130.0" style="-fx-background-color: #cacaca;" text="Retour" textFill="#1500ff">
+            <font>
+                <Font size="17.0" />
+            </font>
+        </Button>  <Text fx:id="errdate" layoutX="659.0" layoutY="385.0" strokeType="OUTSIDE" strokeWidth="0.0">
+            <font>
+                <Font size="25.0" />
+            </font>
+        </Text>
+        <Text fx:id="errprix" layoutX="659.0" layoutY="459.0" strokeType="OUTSIDE" strokeWidth="0.0">
+            <font>
+                <Font size="28.0" />
+            </font>
+        </Text>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6d89ed4a" height="934.0" layoutX="276.0" layoutY="92.0" stroke="BLACK" strokeType="INSIDE" width="965.0" AnchorPane.leftAnchor="276.0" AnchorPane.rightAnchor="373.0" />
+      <Text fx:id="errdate1" layoutX="690.0" layoutY="330.0" strokeType="OUTSIDE" strokeWidth="0.0">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+      <Text fx:id="errprix1" layoutX="690.0" layoutY="404.0" strokeType="OUTSIDE" strokeWidth="0.0">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Text>
+      <Text fx:id="user" layoutX="299.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="(user)" AnchorPane.leftAnchor="299.0">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Text>
+      <VBox layoutX="364.0" layoutY="185.0" prefHeight="200.0" prefWidth="567.0" AnchorPane.leftAnchor="364.0" AnchorPane.rightAnchor="683.0">
+         <children>
+            <Text fx:id="description" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="534.9367980957031" VBox.vgrow="ALWAYS">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Text>
+         </children>
+      </VBox>
+      <VBox layoutX="370.4" layoutY="420.0" prefHeight="294.0" prefWidth="826.0" AnchorPane.leftAnchor="370.0" AnchorPane.rightAnchor="418.0">
+         <children>
+            <HBox prefHeight="33.0" prefWidth="426.0">
+               <children>
+                  <TextField fx:id="comment" prefHeight="34.0" prefWidth="709.0" promptText="Ajouter un commenter" />
+                  <Button fx:id="submit" mnemonicParsing="false" prefHeight="34.0" prefWidth="120.0" text="Envoyer" />
+               </children>
+            </HBox>
+             <ListView fx:id="listView" layoutX="210.11321510866327" layoutY="167.54717584095994" prefHeight="210.0" prefWidth="837.0" style="-fx-background-color: transparent; -fx-control-inner-background: transparent;" AnchorPane.bottomAnchor="288.0" AnchorPane.leftAnchor="210.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="168.0">
+
+             </ListView>
+
+             <Pagination fx:id="pagination" prefHeight="46.0" prefWidth="593.0" />
+         </children>
+      </VBox>
+      <Text fx:id="date" fill="#4e4e4e" layoutX="788.0" layoutY="404.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date" wrappingWidth="71.46630859375" AnchorPane.leftAnchor="788.0" AnchorPane.rightAnchor="754.4000000000001" />
+      <Text fx:id="heure" fill="#4e4e4e" layoutX="859.0" layoutY="404.0" strokeType="OUTSIDE" strokeWidth="0.0" text="heure" wrappingWidth="58.39999999999981" AnchorPane.leftAnchor="859.0" AnchorPane.rightAnchor="696.4663085937502" />
+      <Text layoutX="745.0" layoutY="404.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Crée le :" AnchorPane.leftAnchor="745.0" AnchorPane.rightAnchor="826.3565429687501" />
+      <Button fx:id="qr" layoutX="1072.0" layoutY="197.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="119.0" text="Génerer code QR" />
+      <ImageView fx:id="qrCodeImageView" fitHeight="150.0" fitWidth="154.0" layoutX="1055.0" layoutY="245.0" pickOnBounds="true" preserveRatio="true" />
+    </children>
+</AnchorPane>
